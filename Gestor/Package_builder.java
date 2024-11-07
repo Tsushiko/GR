@@ -21,6 +21,16 @@ public class Package_builder {
     // Em principio o construtor vai receber variáveis da main, variáveis q vêem do gestor colocar como input,
     // Mas ainda percebo bem a trama por isso vai ficar assim com uma predefinida, para testar apenas.
 
+    /*        // Obtém a data e hora atual
+        LocalDateTime now = LocalDateTime.now();
+
+        // Define o formato desejado
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd:MM:yyyy:HH:mm:ss:SSS");
+
+        // Formata a data e hora e atribui ao atributo
+        this.TimeStamp = now.format(formatter);
+    */
+
     public Package_builder(int m){//String ta, char ty, String time,String m, String iid, String value, String error){
 
         // Acho q dá para restringir uma variável para so ter cenas especificas, tipo Type só puder ser G,S,N ou R
