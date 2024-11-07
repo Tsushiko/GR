@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             int port = 2;
-            String ip = "172.26.110.128";
+            String ip = "localhost";
             int idmensagem=0;
             //Para usar a mesma socket para mensagems:
             //InetAddress receiverAddress = InetAddress.getByName(ip);
