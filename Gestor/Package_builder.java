@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Package_builder {
     //Classe para a costrução da trama, não sei se tem de ser feita em separado ou se isto é sequer util?
@@ -21,27 +22,17 @@ public class Package_builder {
     // Em principio o construtor vai receber variáveis da main, variáveis q vêem do gestor colocar como input,
     // Mas ainda percebo bem a trama por isso vai ficar assim com uma predefinida, para testar apenas.
 
-    /*        // Obtém a data e hora atual
-        LocalDateTime now = LocalDateTime.now();
-
-        // Define o formato desejado
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd:MM:yyyy:HH:mm:ss:SSS");
-
-        // Formata a data e hora e atribui ao atributo
-        this.TimeStamp = now.format(formatter);
-    */
-
-    public Package_builder(int m){//String ta, char ty, String time,String m, String iid, String value, String error){
+    public Package_builder(char type, int m, String OID,String data_time, String data ){//String ta, char ty, String time,String m, String iid, String value, String error){
 
         // Acho q dá para restringir uma variável para so ter cenas especificas, tipo Type só puder ser G,S,N ou R
         this.Tag = "kdk847ufh84jg87g";
-        this.Type = 'G';
+        this.Type = type; //'G';
         //Stor na teorica disse q podia ser random ou apenas irmos incrementar com cada mensagem
         //Acho q incrementar a cada mensagem ajuda
-        this.TimeStamp="day";
+        this.TimeStamp=data_time;
         this.MessageIdentifier = m;
-        this.IIDList="1.2.1.1";
-        this.ValueList="Valores";
+        this.IIDList=OID; //"1.2.1.1";
+        this.ValueList= data;
         //this.ErrorList=;
     }
     public String toString(){
@@ -49,4 +40,6 @@ public class Package_builder {
         return Tag + "\0" + Type + "\0" + TimeStamp + "\0" + Integer.toString(MessageIdentifier) +"\0" + IIDList +"\0"
                 + ValueList + "\0"; //ErrorList;
     }
+
+
 }
