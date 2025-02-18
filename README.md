@@ -1,10 +1,11 @@
 # Projeto de Gestão de Redes
 Agente 
-- Implementar a MIB
-- Receção e parsing das mensagens
-- ...
+- Implementação de um L-MIB
+- Receção , parsing e resposta das mensagens
+- Tratamento de Erros
+- Simulação dos dispositivos (Sensores , atuadores)
 
 Gestor
-- Construtor do pacote
-- Interface da app (?)
-- ...
+- Construtor do pacote do protocolo L-SNMP (Formato TLV, type-length-value)
+- Interface da APP.
+
