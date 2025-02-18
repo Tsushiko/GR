@@ -7,9 +7,8 @@ Agente
 
 Gestor
 - Construtor do pacote do protocolo L-SNMP (Os 3 últimos campos estão no formato TLV, type-length-value)
-|Tag | Type | Time-Stamp | Message-Identifier | IID-List | Value-List | Error-List |
-
-|------|------|----|-------|------|------|----|
+- |Tag | Type | Time-Stamp | Message-Identifier | IID-List | Value-List | Error-List |
+  |------|------|----|-------|------|------|----|
 - Interface da APP.
 
 Interface gráfica do gestor:
