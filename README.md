@@ -19,5 +19,6 @@
 
 ## Observações:
 
-O beaconRate do devices , define o tempo em segundos para as atualizações. (Fazer Set com IID 1.3.1 para atualizar este campo)
+O beaconRate do devices , define o tempo em segundos para as atualizações (Fazer Set com IID 1.3.1 para atualizar este campo).
+
 O sensor vai incrementar 1 de update em update até o valor do atuador.
