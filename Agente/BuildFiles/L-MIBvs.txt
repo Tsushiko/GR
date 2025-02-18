@@ -1,0 +1,84 @@
+-- Structures:
+-- (1) device Group
+-- (2) sensors Table
+-- (3) actuators Table
+-- device (1)
+-- This group includes objects that represent characteristics of a Domotics device.
+
+device OBJECT {
+TYPE Group
+INCLUDE id, type, beaconRate, nSensors, nActuators, dateAndTime, upTime, lastTimeUpdated,
+operationalStatus, reset
+NOTIFICATION id, type, nSensores, nAtuadores, dateAndTime, upTime, lastTimeUpdated,
+operationalStatus
+NOTIFICATION-RATE beaconRate
+DESCRIPTION "Simple list of objects, where each object represents a characteristic
+from a domotics device."
+IID 1 }
+
+device.id OBJECT {
+TYPE String
+ACESS read-only
+DESCRIPTION "Tag identifying the device (the MacAddress, for example)."
+IID 1.1 }
+
+device.type OBJECT {
+TYPE String
+ACESS read-only
+DESCRIPTION "Text description for the type of device (“Lights & A/C Conditioning”, for
+example)."
+IID 1.2 }
+
+device.beaconRate OBJECT {
+TYPE Integer
+ACESS read-write
+DESCRIPTION "Frequency rate in seconds for issuing a notification message with information
+from this group that acts as a beacon broadcasting message to all the managers in the LAN.
+If value is set to zero the notifications for this group are halted."
+IID 1.3 }
+
+device.nSensors OBJECT {
+TYPE Integer
+ACESS read-only
+DESCRIPTION "Number of sensors implemented in the device and present in the sensors
+Table."
+IID 1.4 }
+
+device.nActuators OBJECT {
+TYPE Integer
+ACESS read-only
+DESCRIPTION Number of actuators implemented in the device and present in the actuators
+Table."
+IID 1.5 }
+
+device.dateAndTime OBJECT {
+TYPE Timestamp
+ACESS read-write
+DESCRIPTION "System date and time setup in the device."
+IID 1.6 }
+
+device.upTime OBJECT {
+TYPE Timestamp
+ACESS read-only
+DESCRIPTION "For how long the device is working since last boot/reset."
+IID 1.7 }
+
+device.lastTimeUpdated OBJECT {
+TYPE Timestamp
+ACESS read-only
+DESCRIPTION "Date and time of the last update of any object in the device L-MIBvS."
+IID 1.8 }
+
+device.operationalStatus OBJECT {
+TYPE Integer
+ACESS read-only
+DESCRIPTION "The operational state of the device, where the value 0
+corresponds to a standby operational state, 1 corresponds to a normal operational state
+and 2 or greater corresponds to an non-operational error state."
+IID 1.9 }
+
+device.reset OBJECT {
+TYPE Integer
+ACESS read-write
+DESCRIPTION "Value 0 means no reset and value 1 means a reset procedure must be done."
+IID 1.10 }
