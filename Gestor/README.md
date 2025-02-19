@@ -1,1 +1,1 @@
-Gestor Sem interface Gráfica
+Gestor
